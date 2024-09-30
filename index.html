@@ -1,16 +1,62 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<form action="./lighton">
-<input type="submit" value="Light on" />
-</form>
-<form action="./lightoff">
-<input type="submit" value="Light off" />
-</form>
-<p>LED is {state}</p>
-<p>Temperature is {temperature}</p>
-</body>
-</html>
+            <html>
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <style>
+                    body {{
+                        background-color: black;
+                        color: white; 
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        margin: 0;
+                    }}
+
+                    .card {{
+                        background-color: #1c1c1c;
+                        border: 1px solid white; 
+                        border-radius: 10px;
+                        padding: 20px;
+                        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+                        text-align: center;
+                    }}
+
+                    form {{
+                        margin: 10px 0;
+                    }}
+
+                    input[type="submit"] {{
+                        background-color: #a0a0a0; 
+                        color: white;
+                        border: none; 
+                        border-radius: 5px; 
+                        padding: 10px 20px; 
+                        cursor: pointer; 
+                        font-size: 16px; 
+                    }}
+
+                    input[type="submit"]:hover {{
+                        background-color: #909090; 
+                    }}
+                </style>
+            </head>
+            <body>
+                <div class="card">
+                    <form action="./lumos">
+                        <input type="submit" value="Light on" />
+                    </form>
+                    <form action="./nox">
+                        <input type="submit" value="Light off" />
+                    </form>
+                    <form action="./francois_mode">
+                        <input type="submit" value="Red Lights On" />
+                    </form>
+                    <form action="./rave_mode">
+                        <input type="submit" value="RAVE" />
+                    </form>
+                    <p>LED is {state}</p>
+                    <p>Temperature is {temperature}</p>
+                </div>
+            </body>
+            </html>
